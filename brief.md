@@ -22,3 +22,21 @@ Resource: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks - htt
 iOS App Transport Security (ATS) enforces strict security standards by requiring all HTTP network connections made by an app to use secure HTTPS (TLS version 1.2 or later) with strong ciphers. If the app attempts to call a plain HTTP endpoint, ATS blocks the connection entirely and fails the request to prevent cleartext data interception.
 
 Resource: Preventing Insecure Network Connections | Apple Developer Documentation - https://developer.apple.com/documentation/security/preventing_insecure_network_connections
+
+## Networking
+
+IPv6 addressing uses 128-bit addresses, vastly expanding the address space compared to IPv4's 32-bit addresses, and eliminates the primary need for Network Address Translation (NAT). As the number of connected mobile and IoT devices grows exponentially, IPv6 ensures every device can have a globally unique address, enabling more direct, efficient, and scalable end-to-end routing.
+
+Resource: RFC 8200 - Internet Protocol, Version 6 (IPv6) Specification - https://www.ietf.org/rfc/rfc8200.txt
+
+## Cybersecurity
+
+Prompt injection occurs when an attacker manipulates an LLM's behavior through malicious input instructions. Direct prompt injection happens when a user directly inputs malicious prompts to bypass safety controls, whereas indirect prompt injection occurs when the model ingests untrusted external data (such as a poisoned webpage or document) containing hidden instructions. Two ways to reduce this risk include enforcing strict input/output validation and implementing system-level instruction guardrails to isolate untrusted data.
+
+Resource: OWASP Top 10 for Large Language Models - https://owasp.org/www-project-top-10-for-large-language-models/
+
+## Data
+
+Anonymization permanently strips or irreversibly modifies personal identifiers so that the data can no longer be attributed to an identified or identifiable natural person, rendering it entirely outside the scope of data protection laws (like GDPR/PDPL). Pseudonymization replaces identifying fields with artificial identifiers or pseudonyms, meaning the data can still be re-identified with the help of additional separate information, keeping it legally classified as personal data subject to protection laws.
+
+Resource: NIST SP 800-188: De-Identification of Personal Information - https://csrc.nist.gov/pubs/sp/800/188/final
