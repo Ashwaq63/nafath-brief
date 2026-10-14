@@ -40,3 +40,11 @@ Resource: OWASP Top 10 for Large Language Models - https://owasp.org/www-project
 Anonymization permanently strips or irreversibly modifies personal identifiers so that the data can no longer be attributed to an identified or identifiable natural person, rendering it entirely outside the scope of data protection laws (like GDPR/PDPL). Pseudonymization replaces identifying fields with artificial identifiers or pseudonyms, meaning the data can still be re-identified with the help of additional separate information, keeping it legally classified as personal data subject to protection laws.
 
 Resource: NIST SP 800-188: De-Identification of Personal Information - https://csrc.nist.gov/pubs/sp/800/188/final
+
+## Misconception in My Track
+
+A common misconception in cybersecurity is that implementing an input sanitization filter alone is completely sufficient to stop all forms of prompt injection in LLM applications. In reality, traditional input filters fail against indirect prompt injection because malicious instructions can be smuggled via external data sources (like fetched documents or web pages) that bypass the primary user input box entirely. As stated in the OWASP LLM Top 10 documentation under indirect prompt injection risks, applications must treat all external data as untrusted and utilize separation of control and data boundaries.
+
+## Open Question
+
+How can runtime monitoring and guardrail frameworks dynamically detect and block sophisticated indirect prompt injections without degrading the latency and response quality of the public service assistant?
